@@ -1,0 +1,16 @@
+Combined fit: 15 cosmic chronometers + 13 DESI DR2 BAO + DES-SN5YR Dovekie (1820 SNe); r_d free, SN magnitude marginalised
+
+model                         chi2_CC  chi2_BAO   chi2_SN     total  k       AIC       BIC
+Janus                            8.14    241.74   1718.84   1968.72  3   1974.72   1991.29
+                             best fit: H0 = 59.08, q0 = 0.08064, rd = 154.5
+Flat LCDM                        6.04     11.55   1634.05   1651.63  3   1657.63   1674.20
+                             best fit: H0 = 68.07, Om = 0.306, rd = 148.2
+oLCDM (curvature + Lambda)       6.05     11.28   1632.22   1649.55  4   1657.55   1679.64
+                             best fit: H0 = 67.52, Om = 0.2936, OL = 0.6545, rd = 148.7
+
+MCMC posteriors (median and 68% interval):
+  Janus: H0 = 59 (+1.6 / -1.6), q0 = 0.08079 (+0.0057 / -0.0057), rd = 154.7 (+4.3 / -4.2)
+  Flat LCDM: H0 = 67.95 (+1.9 / -1.9), Om = 0.3063 (+0.0076 / -0.0074), rd = 148.4 (+4.4 / -4.1)
+  oLCDM (curvature + Lambda): H0 = 67.32 (+1.9 / -1.9), Om = 0.2932 (+0.011 / -0.012), OL = 0.6531 (+0.029 / -0.029), rd = 149.1 (+4.3 / -4)
+
+chi2(Janus) - chi2(flat LCDM) = 317.1  (same number of free parameters)
