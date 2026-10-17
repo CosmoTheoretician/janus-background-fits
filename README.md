@@ -4,7 +4,7 @@ Tests of the Janus cosmological model (Petit & d'Agostini) against late-universe
 cosmic chronometers, DESI DR2 BAO, two supernova samples, SH0ES-calibrated supernovae and
 redshift-space-distortion growth measurements. All fits are compared with flat ΛCDM on the same
 data with the same number of free parameters. No early-universe assumptions are made anywhere:
-the BAO sound horizon r_d and the supernova absolute magnitude are left free, so only the
+the BAO sound horizon $r_d$ and the supernova absolute magnitude are left free, so only the
 *shape* of the expansion history is tested.
 
 Companion project: N-body simulations of the Janus twin-matter dynamics (see the simulation
@@ -12,15 +12,15 @@ repository linked in the GitHub sidebar).
 
 ## The model being tested
 
-The Janus dust-era exact solution is a(u) = α² ch²(u) on an open (k = −1) universe
+The Janus dust-era exact solution is $a(u) = \alpha^2 \cosh^2 u$ on an open ($k = -1$) universe
 (Petit & d'Agostini 2018; same form in the 2023 and 2024 papers). From it,
 
-    H(z) = H0 (1 + z) sqrt(1 + 2 q0 z),      Ω_m = 2 q0,   Ω_k = 1 − 2 q0,
+$$H(z) = H_0\,(1+z)\sqrt{1 + 2 q_0 z}, \qquad \Omega_m = 2 q_0, \qquad \Omega_k = 1 - 2 q_0,$$
 
-with the published value q0 = −0.087 ± 0.015. This is verified analytically here against the
-authors' own distance formula r = sh(2u0 − 2u_e), so the fits test the model exactly as its
-authors define it. The solution is defined only for 1 + 2 q0 z > 0, i.e. z < 1/(2|q0|) when
-q0 < 0 (z = 5.75 for the published value); the scale factor reaches a minimum there, and the
+with the published value $q_0 = -0.087 \pm 0.015$. This is verified analytically here against the
+authors' own distance formula $r = \sinh(2u_0 - 2u_e)$, so the fits test the model exactly as its
+authors define it. The solution is defined only for $1 + 2q_0 z > 0$, i.e. $z < 1/(2|q_0|)$ when
+$q_0 < 0$ ($z = 5.75$ for the published value); the scale factor reaches a minimum there, and the
 model assigns earlier epochs to a separate radiative-era solution that is not tested here.
 
 Note that the Janus background is mathematically identical to a universe containing only
@@ -32,7 +32,7 @@ negative. Fitting Janus with q0 free therefore tests that entire family.
 | script | data | what it does |
 |---|---|---|
 | `cc_fit.py` | 15 cosmic chronometers | H(z) fit, Janus / ΛCDM / Milne, q0 profile |
-| `bao_fit.py` | DESI DR2 BAO (13 points) | D_M/r_d, D_H/r_d, D_V/r_d with r_d free |
+| `bao_fit.py` | DESI DR2 BAO (13 points) | $D_M/r_d$, $D_H/r_d$, $D_V/r_d$ with $r_d$ free; only $c/(H_0 r_d)$ is constrained |
 | `sn_fit.py` | Pantheon+ (1590 SNe, z > 0.01) | full STAT+SYS covariance, magnitude marginalised |
 | `des_fit.py` | DES-SN5YR Dovekie (1820 SNe) | same method, inverse covariance from DES release |
 | `likelihoods.py` | all of the above | shared likelihood module |
@@ -133,8 +133,15 @@ Every likelihood reproduces a published ΛCDM result before being applied to Jan
 ### Growth of structure
 
 Linear Newtonian two-fluid equations from the three Janus interaction laws (like attracts like,
-unlike repels), on the Janus background, with ordinary matter = baryons (Ω+ = 0.049) and
-twin matter fixed by the background (Ω− = Ω+ − 2q0). Galaxies trace ordinary matter.
+unlike repels), on the Janus background, with ordinary matter = baryons ($\Omega_+ = 0.049$) and
+twin matter fixed by the background ($\Omega_- = \Omega_+ - 2q_0$). Galaxies trace ordinary matter.
+In $x = \ln a$:
+
+$$\delta_\pm'' + \left(2 + \frac{d\ln E}{dx}\right)\delta_\pm' = \frac{3}{2\,E^2 a^3}\left(\Omega_\pm\,\delta_\pm - \Omega_\mp\,\delta_\mp\right),
+\qquad E(z) = (1+z)\sqrt{1+2q_0 z}.$$
+
+The prediction compared with data is $f\sigma_8(z) = \sigma_8\, d\delta_+/dx\,/\,\delta_+(0)$, corrected by
+$H(z)d_A(z)/[H_{\rm ref}(z)d_{A,\rm ref}(z)]$ for each point's reference cosmology.
 
 | | χ² (22 points) | Δχ² vs ΛCDM |
 |---|---|---|
@@ -166,8 +173,8 @@ q0 ∈ [−0.13, −0.04] (68%), a window the expansion data exclude at > 17σ.
 
 Ages are not a problem for any variant. But at the published q0 the fitted solution starts,
 with H = 0 and the scale factor at its minimum, at z = 5.75: every known z > 6 galaxy and
-quasar belongs to the model's unspecified radiative era. Starting before MoM-z14 (z = 14.4)
-needs |q0| < 0.035, just outside the growth window.
+quasar belongs to the model's unspecified radiative era. Starting before MoM-z14 ($z = 14.4$)
+needs $|q_0| < 0.035$, just outside the growth window.
 
 ![Time since start of each solution vs redshift; JWST galaxies dotted, oldest stars shaded, crosses mark the Janus dust-era start](results/first_galaxies.png)
 *Time since start of each solution vs redshift; JWST galaxies dotted, oldest stars shaded, crosses mark the Janus dust-era start*
@@ -185,7 +192,10 @@ intersection of all observational windows is empty. Under ΛCDM the same probes 
 
 ### A future test: redshift drift (`results/redshift_drift.png`)
 
-Velocity drift of a fixed source per decade, cm/s:
+Velocity drift of a fixed source per decade, cm/s, from
+
+$$\dot v = c H_0\left[1 - \frac{E(z)}{1+z}\right] = c H_0\left[1 - \sqrt{1 + 2q_0 z}\right] \text{ (Janus)}:$$
+
 
 | model | z = 2 | z = 3 | z = 4 | z = 5 |
 |---|---|---|---|---|
@@ -203,7 +213,7 @@ clean, model-independent falsification route for the Janus expansion law.
 
 ### Standard sirens (`results/sirens.png`)
 
-Gravitational-wave sirens measure distances with no supernova calibration and no BAO ruler.
+Gravitational-wave sirens measure $D_L(z) = (1+z)\,\frac{c}{H_0}\,\frac{\sinh(\sqrt{\Omega_k}\,\chi)}{\sqrt{\Omega_k}}$, $\chi = \int_0^z dz'/E(z')$, with no supernova calibration and no BAO ruler.
 Today they constrain only H0 (every model agrees on distance at z = 0.01):
 
 | model | H0 needed to fit CC + BAO + SN | vs LVK GWTC-3, 68 (+8/−6) |
@@ -224,9 +234,13 @@ of every systematic in the data used here.
 ### N-body code versus linear theory (`results/nbody_growth_check.png`)
 
 The companion N-body simulations ran on a kinematic a(t) ∝ t^(2/3) background (not the Janus
-one) with twin-to-ordinary density ratio 64, comoving equations x'' + 2Hx' = g/a³, seeded by
+one) with twin-to-ordinary density ratio 64, comoving equations $\ddot{\mathbf x} + 2H\dot{\mathbf x} = \mathbf g_c/a^3$, seeded by
 Poisson shot noise of 4 × 10⁶ particles per population. That seed fixes the initial power per
-mode to exactly 1/N, so the linear two-fluid equations predict the absolute amplitude of the
+mode to exactly $1/N$, so the linear two-fluid equations
+
+$$\ddot\delta_\pm + 2H\dot\delta_\pm = \frac{4\pi G}{a^3}\left(\rho_\pm\,\delta_\pm - \rho_\mp\,\delta_\mp\right)$$
+
+predict the absolute amplitude of the
 lowest box modes at all later times with no free parameter. Measured from the long 3-D
 expansion run (`lss_20261017_015917`, 61 snapshots to t = 266 t_J):
 
@@ -236,7 +250,7 @@ expansion run (`lss_20261017_015917`, 61 snapshots to t = 266 t_J):
   although its own gravity is 64× weaker, i.e. the twin-driven cross-coupling behaves as written;
 - the absolute amplitude is 2.5× below the pressureless prediction, fixed early and constant
   thereafter. Expansion switches on at t0 = 0.1 t_J where H ≈ 30 equals the twin instability
-  rate √(4πGρ−) ≈ 28, and the source drops 20-fold within ~16 timesteps; a switch-on transient of
+  rate $\sqrt{4\pi G\rho_-} \approx 28$, and the source drops 20-fold within ~16 timesteps; a switch-on transient of
   that size is the likely cause and would need a dt/4 rerun to confirm. Left as an open note.
 
 Only the shape of the growth history enters the fits in this repository (σ8 marginalised or
