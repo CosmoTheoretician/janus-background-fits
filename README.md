@@ -46,6 +46,7 @@ negative. Fitting Janus with q0 free therefore tests that entire family.
 | `redshift_drift.py` | — | predicted redshift drift for ELT/ANDES |
 | `sirens.py` | — | siren H0 vs fitted H0; D_L(z) forecast for Einstein Telescope / Cosmic Explorer |
 | `nbody_growth_check.py` | companion N-body run | growth of the lowest box modes vs linear two-fluid theory, no free parameters |
+| `twin_eos_fit.py [des]` | CC + BAO + SN | closure test: baryons only + curvature + twin sector of free density and CPL w(a) |
 
 Outputs (tables and plots) are in `results/`.
 
@@ -260,6 +261,34 @@ fits rely on, and the unvalidated part (absolute amplitude) is the part they nev
 ![Box-mode δ_rms in the 3-D expansion run against the linear two-fluid prediction](results/nbody_growth_check.png)
 *Box-mode δ_rms in the 3-D expansion run against the linear two-fluid prediction*
 
+### Closure test: can any twin sector rescue a no-dark-matter universe? (`results/twin_eos_fit.png`)
+
+A general Friedmann background with ordinary matter fixed at the baryon density
+($\Omega_b = 0.049$, no dark matter), curvature free, and a twin sector of free density
+(either sign) and equation of state $w(a) = w_0 + w_a(1-a)$, fitted to CC + BAO + Pantheon+
+with $r_d$ free (5 parameters vs 3 for flat ΛCDM), global optimiser:
+
+| twin density | χ² | Δχ² vs flat ΛCDM | H0 | Ω_k | Ω_twin | w0 | wa | r_d |
+|---|---|---|---|---|---|---|---|---|
+| negative (Janus family, any w) | 1796.5 | +374 | 63.5 | 0.976 | −0.025 | 2.69 | −8.43 | 157.0 |
+| positive | 1419.1 | −3.4 | 67.4 | 0.004 | 0.947 | −0.731 | 0.919 | 148.4 |
+| free sign | 1419.1 | −3.4 | 67.4 | 0.004 | 0.947 | −0.731 | 0.919 | 148.4 |
+
+- With negative density the optimiser drives the twin sector to zero: the best negative-density
+  twin universe is the one with no twin matter, and it is worse than Janus's own best fit (which
+  needed positive net matter).
+- With positive density the best fit is ΛCDM in disguise: $w(z)$ runs from −0.73 today through
+  −0.27 at $z = 1$ toward ≈ +0.2 at high $z$, exactly the effective equation of state of
+  0.25 matter + 0.70 Λ, with H0, Ω_k and r_d at the ΛCDM values; two extra parameters buy
+  Δχ² = −3.4 (AIC slightly worse than flat ΛCDM).
+
+So the data do not merely disfavour Janus: given only baryons, they require ≈ 0.95 of additional
+positively gravitating energy that behaves like matter early and like Λ late. No negative-density
+sector with any equation of state can substitute for it.
+
+![Expansion rate relative to flat ΛCDM for the best no-dark-matter backgrounds](results/twin_eos_fit.png)
+*Expansion rate relative to flat ΛCDM for the best no-dark-matter backgrounds*
+
 ## Conclusions
 
 1. **The Janus expansion history, as published, is refuted by late-universe data.** With the
@@ -296,6 +325,11 @@ fits rely on, and the unvalidated part (absolute amplitude) is the part they nev
    separated by 9–20 cm/s per decade against the ELT/ANDES target of a few cm/s. Standard
    sirens: D_L differences of 4–66% at z = 1–3 at equal H0, against few-percent per-event
    precision expected from ET/CE.
+
+8. **No rescue by a different twin sector.** With only baryons and a twin component of free
+   density and equation of state, the negative-density family is driven to zero twin matter and
+   fits worse than Janus itself; the positive-density family reconstructs ΛCDM's dark matter
+   plus dark energy as a single fluid. The missing component must gravitate positively.
 
 **Overall:** the Janus *mechanism* (twin matter shaping ordinary-matter structure) is
 physically workable and partly reproduced in simulation; the Janus *universe* (the published
