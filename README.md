@@ -23,6 +23,17 @@ authors define it. The solution is defined only for $1 + 2q_0 z > 0$, i.e. $z < 
 $q_0 < 0$ ($z = 5.75$ for the published value); the scale factor reaches a minimum there, and the
 model assigns earlier epochs to a separate radiative-era solution that is not tested here.
 
+**Why the test does not ignore the bimetric structure.** In the authors' own construction the
+two sectors have separate FLRW metrics with scale factors $a$ and $\bar a$, coupled through the
+ratio of metric determinants $(\bar a/a)^3$; compatibility of the resulting equations gives
+their generalised conservation law $\rho c^2 a^3 + \bar\rho\,\bar c^2\,\bar a^3 = E = \text{const}$
+(Petit, Margnat & Zejli 2024, Sect. 10). The twin density therefore enters *our* Friedmann
+equation as $E/a^3$: a matter-like term with total energy $E$, independent of $\bar a(t)$, and the
+additive form $H(z) = H_0(1+z)\sqrt{1+2q_0 z}$ is the unique dust-era consequence of the coupling,
+not a simplification made here. A non-dust twin sector ($\bar w \neq 0$) can change the time
+dependence of the twin contribution through $\bar a(t)$, but never its sign, which is the sign of
+$\bar\rho$; that whole family is covered by the negative-density row of the closure test below.
+
 Note that the Janus background is mathematically identical to a universe containing only
 matter and curvature with no cosmological constant and a matter density allowed to be
 negative. Fitting Janus with q0 free therefore tests that entire family.
@@ -359,8 +370,12 @@ two-metric equations.
 Janus model
 - Petit J.-P., d'Agostini G. (2018), "Constraints on Janus cosmological model from recent
   observations of supernovae type Ia", Astrophys. Space Sci. 363, 139.
-- Petit J.-P., Margnat F., Zejli H. (2024), Eur. Phys. J. C — current statement of the model
-  (check volume/article number).
+- Petit J.-P., Margnat F., Zejli H. (2024), "A bimetric cosmological model based on Andreï
+  Sakharov's twin universe approach", Eur. Phys. J. C, doi:10.1140/epjc/s10052-024-13569-w
+  (arXiv:2412.04644) — current statement of the model; Sect. 10 gives the two-metric FLRW
+  construction and the conservation law used above.
+- Petit J.-P., d'Agostini G. (2015), "Lagrangian derivation of the two coupled field equations
+  in the Janus cosmological model", Astrophys. Space Sci., doi:10.1007/s10509-015-2250-6.
 - The 2023 consistency paper giving a(+) = (4πGρ0/3c²) ch²(v) (add reference).
 
 Data
