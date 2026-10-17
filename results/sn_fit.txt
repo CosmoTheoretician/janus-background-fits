@@ -1,0 +1,10 @@
+Pantheon+ (z > 0.01): 1590 supernovae, full STAT+SYS covariance, absolute magnitude marginalised
+
+model                           chi2   dof  chi2/dof  best fit
+Janus (q0 free)              1449.38  1588     0.913  q0 = -0.022
+Janus (q0 = -0.087)          1471.98  1589     0.926
+Flat LCDM (Om free)          1402.92  1588     0.883  Om = 0.332
+Milne                        1451.44  1589     0.913
+
+Janus q0 68% range: -0.034 to -0.008
+chi2(best Janus) - chi2(best flat LCDM) = 46.5
