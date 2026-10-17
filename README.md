@@ -44,6 +44,8 @@ negative. Fitting Janus with q0 free therefore tests that entire family.
 | `first_galaxies.py` | — | cosmic ages, start of the Janus dust era vs JWST galaxies |
 | `q0_map.py` | — | allowed q0 window from every test on one axis |
 | `redshift_drift.py` | — | predicted redshift drift for ELT/ANDES |
+| `sirens.py` | — | siren H0 vs fitted H0; D_L(z) forecast for Einstein Telescope / Cosmic Explorer |
+| `nbody_growth_check.py` | companion N-body run | growth of the lowest box modes vs linear two-fluid theory, no free parameters |
 
 Outputs (tables and plots) are in `results/`.
 
@@ -199,23 +201,94 @@ clean, model-independent falsification route for the Janus expansion law.
 ![Predicted redshift drift per decade; shaded band is the ELT/ANDES Lyα range](results/redshift_drift.png)
 *Predicted redshift drift per decade; shaded band is the ELT/ANDES Lyα range*
 
+### Standard sirens (`results/sirens.png`)
+
+Gravitational-wave sirens measure distances with no supernova calibration and no BAO ruler.
+Today they constrain only H0 (every model agrees on distance at z = 0.01):
+
+| model | H0 needed to fit CC + BAO + SN | vs LVK GWTC-3, 68 (+8/−6) |
+|---|---|---|
+| Flat ΛCDM | 68.1 | 0.0σ |
+| Janus q0 = −0.087 (published) | 63.7 | −0.7σ |
+| Janus q0 = +0.085 (combined best) | 59.0 | −1.5σ |
+
+At equal H0, the published Janus model predicts D_L larger than ΛCDM by 4% at z = 1, 29% at
+z = 2 and 66% at z = 3; the combined-best Janus is 7–8% *below* ΛCDM at z = 0.5–1. Einstein
+Telescope / Cosmic Explorer neutron-star mergers with counterparts (few-percent D_L per event,
+reach z ~ 2–3) would therefore separate the expansion laws with a few dozen events, independent
+of every systematic in the data used here.
+
+![Luminosity distance relative to flat ΛCDM at equal H0; current siren reach and ET/CE reach shaded](results/sirens.png)
+*Luminosity distance relative to flat ΛCDM at equal H0; current siren reach and ET/CE reach shaded*
+
+### N-body code versus linear theory (`results/nbody_growth_check.png`)
+
+The companion N-body simulations ran on a kinematic a(t) ∝ t^(2/3) background (not the Janus
+one) with twin-to-ordinary density ratio 64, comoving equations x'' + 2Hx' = g/a³, seeded by
+Poisson shot noise of 4 × 10⁶ particles per population. That seed fixes the initial power per
+mode to exactly 1/N, so the linear two-fluid equations predict the absolute amplitude of the
+lowest box modes at all later times with no free parameter. Measured from the long 3-D
+expansion run (`lss_20261017_015917`, 61 snapshots to t = 266 t_J):
+
+- the growth *rate* matches: from t ≈ 40 to 266 t_J the scale factor grows 15-fold and the
+  simulation/theory ratio stays constant to a few percent (0.37–0.39 twin, 0.42–0.46 ordinary);
+- the mode structure matches: nearly equal |δ| in both populations, with ordinary matter growing
+  although its own gravity is 64× weaker, i.e. the twin-driven cross-coupling behaves as written;
+- the absolute amplitude is 2.5× below the pressureless prediction, fixed early and constant
+  thereafter. Expansion switches on at t0 = 0.1 t_J where H ≈ 30 equals the twin instability
+  rate √(4πGρ−) ≈ 28, and the source drops 20-fold within ~16 timesteps; a switch-on transient of
+  that size is the likely cause and would need a dt/4 rerun to confirm. Left as an open note.
+
+Only the shape of the growth history enters the fits in this repository (σ8 marginalised or
+given a prior), so the simulation confirms exactly the part of the growth equations that the
+fits rely on, and the unvalidated part (absolute amplitude) is the part they never used.
+
+![Box-mode δ_rms in the 3-D expansion run against the linear two-fluid prediction](results/nbody_growth_check.png)
+*Box-mode δ_rms in the 3-D expansion run against the linear two-fluid prediction*
+
 ## Conclusions
 
-1. **The Janus expansion history, as published, is refuted by late-universe data** (BAO with
-   free sound horizon, two independent supernova samples), with no early-universe assumptions,
-   by Δχ² ≈ 317 against ΛCDM at equal parameter count. The model's defining feature, an
-   accelerating universe with negative net mass (q0 < 0), is excluded at ≈ 17σ within the model
-   itself; the published q0 = −0.087 at ≈ 46σ.
-2. **The twin-matter structure-formation mechanism is not refuted** by growth-rate data, but
-   only in a q0 window the expansion data exclude. There is no q0 at which Janus fits both.
-3. **As a complete cosmology the model is unspecified**: at the published q0 everything before
-   z ≈ 5.7, including the whole JWST era, lies outside the solution that was fitted, in a
-   radiative-era model with varying constants for which no distance or growth predictions exist.
-4. **Why the 2018 supernova fit looked good:** a χ²/dof below 1 is reached by almost any
+1. **The Janus expansion history, as published, is refuted by late-universe data.** With the
+   sound horizon and supernova magnitude free (no early-universe assumptions), DESI DR2 BAO and
+   two independent supernova samples reject it by Δχ² ≈ 317 against flat ΛCDM at equal parameter
+   count. Under Janus the datasets contradict each other (supernovae want q0 ≈ −0.02, BAO
+   +0.10); under ΛCDM they agree, and the fit recovers r_d ≈ 148 Mpc with no CMB input.
+2. **The model's defining claim fails within the model itself.** Negative net mass driving
+   acceleration (q0 < 0) is excluded at ≈ 17σ; the published q0 = −0.087 at ≈ 46σ. The only
+   Janus background the data tolerate is decelerating, with positive net mass ≈ 0.17, more
+   than three times the baryon density, i.e. it would need the dark matter the model removes.
+   Curvature with a free Λ does not help (the data require Ω_Λ = 0.66 ± 0.03), and Janus
+   worsens the Hubble tension about tenfold in χ².
+3. **No value of q0 satisfies all probes.** The 68% windows from supernovae and BAO are
+   disjoint by ~0.1; the intersection of every observational window is empty.
+4. **The twin-matter structure mechanism is not refuted.** Growth-rate data allow it at ≈ 1.9σ
+   provided structure is seeded in the twin sector (the authors' own picture), with
+   q0 ∈ [−0.13, −0.04] under a lensing σ8 prior; the companion N-body code reproduces the
+   mechanism and its linear growth rate matches the equations used here. But that q0 window is
+   excluded by the expansion data at > 17σ: there is no q0 at which Janus fits both.
+5. **As a complete cosmology the model is unspecified.** At the published q0 the fitted
+   solution begins, static and at minimum size, at z = 5.75; every known z > 6 galaxy and
+   quasar, including the whole JWST era, lies in a radiative-era model with varying constants
+   for which no distance or growth predictions exist. Starting before the earliest confirmed
+   galaxy (z = 14.4) needs |q0| < 0.035, outside the growth window. Cosmic ages themselves are
+   not a problem for any variant.
+6. **Why the 2018 supernova fit looked good.** A χ²/dof below 1 is reached by almost any
    reasonable expansion history with supernova errors; the informative quantity is the
-   comparison with ΛCDM on the same data and freedom, which the 2018 analysis did not make,
-   and which Janus loses by Δχ² ≈ 30–50 in each sample. The 2018 fit also used light-curve
+   comparison with ΛCDM on the same data and freedom, which the 2018 analysis did not make and
+   which Janus loses by Δχ² ≈ 30–50 in each sample. The 2018 fit also used light-curve
    calibration from the ΛCDM fit rather than fitting or marginalising it.
+7. **Two clean future falsification routes exist that depend on none of the above data.**
+   Redshift drift: the published Janus model and ΛCDM predict opposite signs at z ≈ 2–5,
+   separated by 9–20 cm/s per decade against the ELT/ANDES target of a few cm/s. Standard
+   sirens: D_L differences of 4–66% at z = 1–3 at equal H0, against few-percent per-event
+   precision expected from ET/CE.
+
+**Overall:** the Janus *mechanism* (twin matter shaping ordinary-matter structure) is
+physically workable and partly reproduced in simulation; the Janus *universe* (the published
+expansion history and its parameters) is not the one observed. What could change this verdict
+is in the hands of the model's authors: a different background that fits BAO and supernovae
+together, a specified early-universe model covering z > 6, or a perturbation theory of the
+two-metric equations.
 
 ## Caveats
 
@@ -260,3 +333,7 @@ Data
   MoM-z14, Naidu R. P. et al. (2025).
 - Redshift drift: Sandage A. (1962) ApJ 136, 319; Loeb A. (1998) ApJL 499, L111; Liske J.
   et al. (2008) MNRAS 386, 1192; ELT/ANDES science case.
+- Standard sirens: Abbott B. P. et al. (LVC) (2017) Nature 551, 85 (GW170817 H0);
+  Abbott R. et al. (LVK) (2023) ApJ 949, 76 (GWTC-3 cosmology); Einstein Telescope and
+  Cosmic Explorer science cases.
+- Companion N-body project: see the simulation repository linked in the GitHub sidebar.
