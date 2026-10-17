@@ -218,7 +218,3 @@ Data
   MoM-z14, Naidu R. P. et al. (2025).
 - Redshift drift: Sandage A. (1962) ApJ 136, 319; Loeb A. (1998) ApJL 499, L111; Liske J.
   et al. (2008) MNRAS 386, 1192; ELT/ANDES science case.
-
-Analysis code was developed with the assistance of an AI model (Claude, Anthropic); all
-computations were run by the author and every likelihood was validated against published
-ΛCDM results before use.
