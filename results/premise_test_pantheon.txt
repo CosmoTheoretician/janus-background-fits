@@ -1,0 +1,9 @@
+Janus model, CC + DESI DR2 BAO + Pantheon+ (1590 SNe)
+
+best fit: H0 = 58.96, q0 = +0.0853, rd = 154.3, chi2 = 1739.05
+
+q0 = 0 (coasting, zero net mass)         chi2 =   2043.99  delta chi2 =   304.9  (~17.5 sigma)  H0 = 61.2, rd = 159.8
+q0 = -0.087 (Petit & d'Agostini 2018)    chi2 =   3869.89  delta chi2 =  2130.8  (~46.2 sigma)  H0 = 63.7, rd = 170.8
+
+Within the Janus background, Omega_m = 2 q0: q0 > 0 means positive net mass,
+the opposite of the model's premise that negative net mass drives acceleration.

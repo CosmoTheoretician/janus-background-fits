@@ -1,0 +1,12 @@
+Pantheon+ with SH0ES Cepheid calibration (absolute H0)
+
+Janus:
+  calibrated SNe alone:      H0 = 72.23, M = -19.234, q0 = -0.021, chi2 = 1501.4
+  + BAO + CC (all combined):  H0 = 68.40, M = -19.323, q0 = +0.082, rd = 133.3, chi2 = 1835.6
+  chi2 cost of combining = 334.2
+
+Flat LCDM:
+  calibrated SNe alone:      H0 = 73.53, M = -19.244, Om = +0.332, chi2 = 1452.0
+  + BAO + CC (all combined):  H0 = 72.55, M = -19.282, Om = +0.302, rd = 139.5, chi2 = 1478.5
+  chi2 cost of combining = 26.5
+
