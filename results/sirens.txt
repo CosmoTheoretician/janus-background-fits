@@ -1,0 +1,30 @@
+Standard sirens
+
+1. Siren H0 (no supernova calibration) versus the H0 each model needs to fit CC + BAO + SN:
+
+  Flat LCDM (combined fit)                     H0 =  68.1   vs GWTC-3          68 +8/-6:  +0.0 sigma
+  Flat LCDM (combined fit)                     H0 =  68.1   vs GW170817 alone  70 +12/-8:  -0.2 sigma
+  Janus q0 = -0.087 (published), H0 from fit   H0 =  63.7   vs GWTC-3          68 +8/-6:  -0.7 sigma
+  Janus q0 = -0.087 (published), H0 from fit   H0 =  63.7   vs GW170817 alone  70 +12/-8:  -0.8 sigma
+  Janus q0 = +0.085 (combined best)            H0 =  59.0   vs GWTC-3          68 +8/-6:  -1.5 sigma
+  Janus q0 = +0.085 (combined best)            H0 =  59.0   vs GW170817 alone  70 +12/-8:  -1.4 sigma
+
+2. Luminosity distance D_L(z) [Mpc] and ratio to flat LCDM (future sirens with redshifts measure this directly):
+
+      z                Flat LCDM        Janus q0 = -0.087        Janus q0 = +0.085
+   0.01        44 (1.000)               47 (1.067)               51 (1.151)       
+   0.10       473 (1.000)              496 (1.050)              531 (1.123)       
+   0.30      1595 (1.000)             1648 (1.034)             1728 (1.084)       
+   0.50      2908 (1.000)             3022 (1.039)             3098 (1.065)       
+   1.00      6776 (1.000)             7514 (1.109)             7227 (1.067)       
+   2.00     15919 (1.000)            21940 (1.378)            18152 (1.140)       
+   3.00     26030 (1.000)            46308 (1.779)            32090 (1.233)       
+
+Same-H0 comparison (shape only, H0 = 68 for all): ratio of D_L to flat LCDM
+
+  Janus q0 = -0.087 (published), H0 from fit   z=0.3: 0.967 z=0.5: 0.972 z=1.0: 1.037 z=2.0: 1.289 z=3.0: 1.664
+  Janus q0 = +0.085 (combined best)            z=0.3: 0.939 z=0.5: 0.923 z=1.0: 0.924 z=2.0: 0.988 z=3.0: 1.068
+
+Einstein Telescope / Cosmic Explorer forecasts: binary neutron stars with counterparts to z ~ 2-3,
+D_L to a few percent per event, percent-level H(z) after ~100 events. A 5-10% shape difference
+at z ~ 1-2 is therefore a decisive test independent of all supernova and BAO systematics.
