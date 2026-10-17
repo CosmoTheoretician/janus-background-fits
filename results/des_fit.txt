@@ -1,0 +1,11 @@
+DES-SN5YR (Dovekie recalibration): 1820 supernovae (0.025 < z < 1.14),
+full stat+sys covariance, absolute magnitude marginalised
+
+model                           chi2   dof  chi2/dof  best fit
+Janus (q0 free)              1660.72  1818     0.913  q0 = -0.027
+Janus (q0 = -0.087)          1683.53  1819     0.926
+Flat LCDM (Om free)          1631.42  1818     0.897  Om = 0.330
+Milne                        1664.80  1819     0.915
+
+Janus q0 68% range: -0.040 to -0.015
+chi2(best Janus) - chi2(best flat LCDM) = 29.3
