@@ -1,0 +1,11 @@
+Cosmic ages (Gyr). Oldest stars: about 12.5-13.5 Gyr.
+
+model                                          age today  z_start          GN-z11 z=10.6  JADES-GS-z13-0 z=13.2  JADES-GS-z14-0 z=14.2         MoM-z14 z=14.4
+Flat LCDM (combined fit)                           13.79      inf                  0.439                  0.324                  0.293                  0.287
+Janus q0 = -0.087 (Petit), H0 = 63.7               16.45     5.75      before matter era      before matter era      before matter era      before matter era
+Janus q0 = -0.048 (growth best), H0 ~ 62.5         16.75    10.42      before matter era      before matter era      before matter era      before matter era
+Janus q0 = +0.085 (combined best), H0 = 59.0       14.25      inf                  0.608                  0.457                  0.415                  0.407
+
+For Janus with q0 < 0, 'age' counts from the start of the dust-era solution at z_start = 1/(2|q0|),
+where the scale factor is at its minimum; the model places an earlier radiative era before that,
+with different physics, so galaxies at z > z_start fall outside the solution that was fitted.

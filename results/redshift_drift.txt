@@ -1,0 +1,9 @@
+Redshift drift: velocity shift of a fixed source, cm/s per decade (positive = redshift increasing)
+
+model                                             z=0.5      z=1      z=2      z=3      z=4      z=5
+Flat LCDM (H0 = 68.1, Om = 0.304)                 +2.61    +2.42    +0.11    -2.55    -5.10    -7.47
+Janus q0 = -0.087 (Petit), H0 = 63.7              +0.87    +1.78    +3.76    +6.03    +8.76   +12.49
+Janus q0 = +0.085 (combined best), H0 = 59.0      -0.75    -1.48    -2.85    -4.14    -5.36    -6.51
+Milne (coasting), H0 = 61                         +0.00    +0.00    +0.00    +0.00    +0.00    +0.00
+
+ELT/ANDES forecast: a few cm/s precision over 10-20 years in the Lyman-alpha forest, z ~ 2-5.

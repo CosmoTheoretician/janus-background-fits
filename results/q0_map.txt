@@ -1,0 +1,14 @@
+Allowed q0 windows (68%):
+  Cosmic chronometers              -0.075 to +0.100
+  Pantheon+ SNe                    -0.034 to -0.008
+  DES-SN5YR SNe                    -0.040 to -0.015
+  DESI DR2 BAO (r_d free)          +0.098 to +0.104
+  Combined CC+BAO+SN (MCMC)        +0.079 to +0.091
+  Growth fσ8 + σ8 prior            -0.132 to -0.036
+  JWST galaxies inside dust era    -0.035 to +0.600
+  Janus premise (q0 < 0)           -0.250 to +0.000
+  Petit & d'Agostini 2018          -0.102 to -0.072
+
+Intersection of all observational windows: EMPTY
+Intersection of SN + BAO alone: EMPTY
+Intersection of growth + JWST + premise: EMPTY

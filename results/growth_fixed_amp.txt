@@ -1,0 +1,15 @@
+Growth of structure, 22 fs8 points, with prior sigma8 = 0.78 +/- 0.05
+
+Flat LCDM (Om free): chi2 = 12.32, Om = 0.263, sigma8 = 0.791
+
+Janus (ordinary matter = baryons, twin = Om+ - 2 q0):
+  start                       chi2 @ q0=-0.087     s8   best chi2      q0     s8
+  in phase (d+ = d-)                     46.41  0.520       15.87  -0.044  0.783
+  in phase, growing                      59.04  0.469       15.79  -0.040  0.776
+  anti-phase (d+ = -d-)                  18.39  0.846       16.12  -0.116  0.785
+  twin matter only                       16.92  0.736       15.87  -0.076  0.776
+  ordinary matter only                  119.87  1.112       79.20  -0.032  1.061
+
+Best Janus: chi2 = 15.79 (q0 = -0.040, start 'in phase, growing', sigma8 = 0.776)
+chi2(best Janus) - chi2(flat LCDM) = 3.47
+chi2(Janus q0=-0.087, best start) - chi2(flat LCDM) = 4.60
