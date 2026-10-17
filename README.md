@@ -101,6 +101,33 @@ Every likelihood reproduces a published ΛCDM result before being applied to Jan
 - SH0ES-calibrated supernovae give H0 ≈ 72–73 in both models; reconciling that with BAO + CC
   costs χ² = 26.5 in ΛCDM (the known Hubble tension) and 334 in Janus.
 
+![Cosmic chronometers: H(z) with the four models (left); Janus χ² profile in q0 (right)](results/cc_fit.png)
+*Cosmic chronometers: H(z) with the four models (left); Janus χ² profile in q0 (right)*
+
+![DESI DR2 BAO: D_M/r_d and D_H/r_d relative to best flat ΛCDM, with Janus and Milne](results/bao_fit.png)
+*DESI DR2 BAO: D_M/r_d and D_H/r_d relative to best flat ΛCDM, with Janus and Milne*
+
+![Pantheon+: residuals relative to best flat ΛCDM (left); Janus q0 profile (right)](results/sn_fit.png)
+*Pantheon+: residuals relative to best flat ΛCDM (left); Janus q0 profile (right)*
+
+![Combined CC + BAO + Pantheon+: Janus posterior](results/combined_corner_janus_pantheon.png)
+*Combined CC + BAO + Pantheon+: Janus posterior*
+
+![Combined CC + BAO + Pantheon+: flat ΛCDM posterior](results/combined_corner_flat_pantheon.png)
+*Combined CC + BAO + Pantheon+: flat ΛCDM posterior*
+
+![Combined CC + BAO + Pantheon+: oΛCDM posterior](results/combined_corner_olcdm_pantheon.png)
+*Combined CC + BAO + Pantheon+: oΛCDM posterior*
+
+![Combined CC + BAO + DES-SN5YR: Janus posterior](results/combined_corner_janus_des.png)
+*Combined CC + BAO + DES-SN5YR: Janus posterior*
+
+![Combined CC + BAO + DES-SN5YR: flat ΛCDM posterior](results/combined_corner_flat_des.png)
+*Combined CC + BAO + DES-SN5YR: flat ΛCDM posterior*
+
+![Combined CC + BAO + DES-SN5YR: oΛCDM posterior](results/combined_corner_olcdm_des.png)
+*Combined CC + BAO + DES-SN5YR: oΛCDM posterior*
+
 ### Growth of structure
 
 Linear Newtonian two-fluid equations from the three Janus interaction laws (like attracts like,
@@ -120,6 +147,12 @@ own picture, and what the companion N-body runs show) the fσ8 shape is close to
 the dominant growing mode is driven by Ω+ + Ω− ≈ 0.27. But it works only for
 q0 ∈ [−0.13, −0.04] (68%), a window the expansion data exclude at > 17σ.
 
+![Growth of structure, σ8 marginalised](results/growth_fit.png)
+*Growth of structure, σ8 marginalised*
+
+![Growth of structure with the σ8 prior 0.78 ± 0.05](results/growth_fixed_amp.png)
+*Growth of structure with the σ8 prior 0.78 ± 0.05*
+
 ### Cosmic history and the earliest galaxies
 
 | model | age today (Gyr) | dust era begins at | JWST galaxies at z = 10.6–14.4 |
@@ -134,6 +167,9 @@ with H = 0 and the scale factor at its minimum, at z = 5.75: every known z > 6 g
 quasar belongs to the model's unspecified radiative era. Starting before MoM-z14 (z = 14.4)
 needs |q0| < 0.035, just outside the growth window.
 
+![Time since start of each solution vs redshift; JWST galaxies dotted, oldest stars shaded, crosses mark the Janus dust-era start](results/first_galaxies.png)
+*Time since start of each solution vs redshift; JWST galaxies dotted, oldest stars shaded, crosses mark the Janus dust-era start*
+
 ### The q0 map (`results/q0_map.png`)
 
 68% windows on the single Janus shape parameter from each probe: chronometers −0.075 to +0.100;
@@ -141,6 +177,9 @@ Pantheon+ −0.034 to −0.008; DES −0.040 to −0.015; BAO +0.098 to +0.104; 
 +0.091; growth −0.132 to −0.036; JWST −0.035 and above; the model's premise q0 < 0;
 published −0.102 to −0.072. **No value of q0 satisfies supernovae and BAO together**, and the
 intersection of all observational windows is empty. Under ΛCDM the same probes agree on Ω_m.
+
+![68% windows on q0 from every test; dashed line at the published −0.087](results/q0_map.png)
+*68% windows on q0 from every test; dashed line at the published −0.087*
 
 ### A future test: redshift drift (`results/redshift_drift.png`)
 
@@ -156,6 +195,9 @@ Velocity drift of a fixed source per decade, cm/s:
 The published Janus model and ΛCDM predict opposite signs across the ELT/ANDES Lyα-forest
 range, separated by 9–20 cm/s per decade against a forecast precision of a few cm/s. This is a
 clean, model-independent falsification route for the Janus expansion law.
+
+![Predicted redshift drift per decade; shaded band is the ELT/ANDES Lyα range](results/redshift_drift.png)
+*Predicted redshift drift per decade; shaded band is the ELT/ANDES Lyα range*
 
 ## Conclusions
 
