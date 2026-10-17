@@ -1,0 +1,13 @@
+Closure test: baryons only (Omega_b = 0.049) + curvature + twin sector with w(a) = w0 + wa(1-a); r_d free
+data: 15 CC + 13 DESI DR2 BAO + Pantheon+ (1590 SNe)
+
+reference: flat LCDM total chi2 = 1422.5, Janus = 1739.05
+
+twin density          chi2  dchi2 vs LCDM     H0    Om_k  Om_twin      w0      wa     rd   effective w(z=0), w(z=1)
+negative (Janus)   1796.52         +374.0   63.5   0.976   -0.025   2.691  -8.433  157.0   +2.69, -1.53
+positive           1419.09           -3.4   67.4   0.004    0.947  -0.731   0.919  148.4   -0.73, -0.27
+free sign          1419.09           -3.4   67.4   0.004    0.947  -0.731   0.919  148.4   -0.73, -0.27
+
+Interpretation key: a twin sector with Om_twin ~ +0.95 and w ~ -0.7 is 'dark matter + dark energy in one fluid';
+Om_twin < 0 is the Janus-type negative-density sector. k = 5 parameters vs 3 for flat LCDM;
+a dchi2 above about +10 means the extra freedom could not buy back the fit.
