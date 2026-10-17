@@ -1,0 +1,11 @@
+DESI DR2 BAO: 13 measurements, 0.295 < z < 2.33, r_d free (only c/(H0 rd) fitted)
+
+model                        chi2  dof  chi2/dof      AIC      BIC  best fit [c/(H0 rd), shape]
+Janus (q0 free)            231.62   11     21.06   235.62   236.75  [33.3318  0.1013]
+Janus (q0 = -0.087)       2389.11   12    199.09  2391.11  2391.67  [27.5467]
+Flat LCDM (Om free)         10.54   11      0.96    14.54    15.67  [29.5217  0.2973]
+Milne                      585.06   12     48.75   587.06   587.62  [30.6609]
+
+Janus q0 profile: best 0.098, 68% range 0.098 to 0.104
+chi2(q0 = -0.087) - chi2(best Janus) = 2158.3
+chi2(best Janus) - chi2(best flat LCDM) = 221.1

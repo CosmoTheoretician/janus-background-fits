@@ -1,0 +1,10 @@
+15 cosmic chronometer points, 0.18 < z < 1.965
+
+model                           chi2  dof  chi2/dof     AIC     BIC  best fit
+Janus (H0, q0 free)             7.49   13      0.58   11.49   12.91  [6.1114e+01 3.0000e-03]
+Janus (q0 = -0.087)             8.81   14      0.63   10.81   11.52  [63.727]
+Flat LCDM (H0, Om free)         5.92   13      0.46    9.92   11.33  [66.824  0.339]
+Milne (H0 free)                 7.50   14      0.54    9.50   10.20  [61.205]
+
+Janus q0 profile: best 0.005, 68% range -0.075 to 0.100
+chi2 at q0 = -0.087 minus best: 1.32
