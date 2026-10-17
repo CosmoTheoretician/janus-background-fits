@@ -1,0 +1,13 @@
+Growth of structure: 22 fs8 measurements (Gold compilation, Sagredo et al. 2018), sigma8 marginalised
+
+Flat LCDM (Om free): chi2 = 12.24 for 20 dof, Om = 0.256, sigma8 = 0.800
+
+Janus, ordinary matter = baryons (Om+ = 0.049), twin matter = Om+ - 2 q0:
+  q0 = -0.087, start 'in phase (d+ = d-)      ': chi2 =    15.91, sigma8 = 0.486
+  q0 = -0.087, start 'in phase, growing       ': chi2 =    16.22, sigma8 = 0.436
+  q0 = -0.087, start 'anti-phase (d+ = -d-)   ': chi2 =    15.91, sigma8 = 0.874
+  q0 = -0.087, start 'twin matter only        ': chi2 =    15.91, sigma8 = 0.723
+  q0 = -0.087, start 'ordinary matter only    ': chi2 =    15.91, sigma8 = 1.562
+
+Best Janus over all q0 < 0.0245 and starting conditions: chi2 = 15.76 (q0 = -0.048, start 'in phase, growing')
+chi2(best Janus) - chi2(flat LCDM) = 3.53
