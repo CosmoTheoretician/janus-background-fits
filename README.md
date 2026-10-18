@@ -1,5 +1,12 @@
 # Janus background fits
 
+[![status: complete](https://img.shields.io/badge/status-complete-2ea043)](#)
+[![result: model refuted](https://img.shields.io/badge/result-Janus%20background%20refuted%20%28%CE%94%CF%87%C2%B2%20%E2%89%88%20317%29-red)](#conclusions)
+[![validated](https://img.shields.io/badge/every%20number-validated%20against%20%CE%9BCDM%20literature-orange)](#validation)
+[![python](https://img.shields.io/badge/python-3.12-3776ab?logo=python&logoColor=white)](#)
+![last commit](https://img.shields.io/github/last-commit/CosmoTheoretician/janus-background-fits)
+[![successor: skua](https://img.shields.io/badge/successor-skua-blue)](https://github.com/CosmoTheoretician/skua)
+
 Tests of the Janus cosmological model (Petit & d'Agostini) against late-universe data:
 cosmic chronometers, DESI DR2 BAO, two supernova samples, SH0ES-calibrated supernovae and
 redshift-space-distortion growth measurements. All fits are compared with flat ΛCDM on the same
