@@ -10,6 +10,8 @@ the BAO sound horizon $r_d$ and the supernova absolute magnitude are left free, 
 Companion project: N-body simulations of the Janus twin-matter dynamics (see the simulation
 repository linked in the GitHub sidebar).
 
+Successor project: [skua](https://github.com/CosmoTheoretician/skua) — the same test rig turned on the evidence for evolving dark energy.
+
 ## The model being tested
 
 The Janus dust-era exact solution is $a(u) = \alpha^2 \cosh^2 u$ on an open ($k = -1$) universe
