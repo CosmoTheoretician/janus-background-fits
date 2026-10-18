@@ -13,7 +13,7 @@ repository linked in the GitHub sidebar).
 ## The model being tested
 
 The Janus dust-era exact solution is $a(u) = \alpha^2 \cosh^2 u$ on an open ($k = -1$) universe
-(Petit & d'Agostini 2018; same form in the 2023 and 2024 papers). From it,
+(D'Agostini & Petit 2018; same form in the 2019 and 2024 papers). From it,
 
 $$H(z) = H_0\,(1+z)\sqrt{1 + 2 q_0 z}, \qquad \Omega_m = 2 q_0, \qquad \Omega_k = 1 - 2 q_0,$$
 
@@ -368,15 +368,16 @@ two-metric equations.
 ## Sources
 
 Janus model
-- Petit J.-P., d'Agostini G. (2018), "Constraints on Janus cosmological model from recent
-  observations of supernovae type Ia", Astrophys. Space Sci. 363, 139.
+- D'Agostini G., Petit J.-P. (2018), "Constraints on Janus Cosmological model from recent
+  observations of supernovae type Ia", Astrophys. Space Sci. 363, 139, doi:10.1007/s10509-018-3365-3.
 - Petit J.-P., Margnat F., Zejli H. (2024), "A bimetric cosmological model based on Andreï
   Sakharov's twin universe approach", Eur. Phys. J. C, doi:10.1140/epjc/s10052-024-13569-w
   (arXiv:2412.04644) — current statement of the model; Sect. 10 gives the two-metric FLRW
   construction and the conservation law used above.
 - Petit J.-P., d'Agostini G. (2015), "Lagrangian derivation of the two coupled field equations
   in the Janus cosmological model", Astrophys. Space Sci., doi:10.1007/s10509-015-2250-6.
-- The 2023 consistency paper giving a(+) = (4πGρ0/3c²) ch²(v) (add reference).
+- Petit J.-P., D'Agostini G., Debergh N. (2019), "Physical and Mathematical Consistency of the
+  Janus Cosmological Model (JCM)", Progress in Physics 15(1), 38–47.
 
 Data
 - Cosmic chronometers: Moresco M. et al. (2012) JCAP 08, 006; Moresco M. (2015) MNRAS 450,
